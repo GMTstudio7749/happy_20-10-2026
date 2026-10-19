@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quà 20/10 ♥</title>
+<style>
+/* Bảng màu: hồng hồng (rose) + tím violet (gần màu), xanh mint (đối lập, làm điểm nhấn), vàng (điểm sáng) */
+:root{--bg1:#fff3f7;--bg2:#f3edff;--card:#fff;--ink:#3b1530;--sub:#8a5a7a;
+  --rose:#d6336c;--violet:#7048e8;--mint:#12b886;--gold:#f2a900;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#1f0f1c;--bg2:#170f2b;--card:#2b1a31;--ink:#ffe8f1;--sub:#cfa3c4;--rose:#ff6b9a;--violet:#a78bfa;--mint:#38d9a9;--gold:#ffd166}}
+:root[data-theme="dark"]{--bg1:#1f0f1c;--bg2:#170f2b;--card:#2b1a31;--ink:#ffe8f1;--sub:#cfa3c4;--rose:#ff6b9a;--violet:#a78bfa;--mint:#38d9a9;--gold:#ffd166}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:linear-gradient(160deg,var(--bg1),var(--bg2)) fixed;color:var(--ink);
+  font-family:"Segoe UI",system-ui,-apple-system,sans-serif;text-align:center;padding:28px 16px 40px;overflow-x:hidden}
+main{position:relative;z-index:1}
+.petal{position:fixed;top:-8vh;z-index:0;pointer-events:none;opacity:.8;animation:fall linear infinite}
+@keyframes fall{to{transform:translate(var(--dx),112vh) rotate(420deg)}}
+h1{margin:6px auto 8px;max-width:640px;font-size:clamp(26px,6.4vw,42px);line-height:1.2;
+  background:linear-gradient(90deg,var(--rose),var(--violet),var(--gold),var(--rose));background-size:300% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+@keyframes shine{to{background-position:300% 0}}
+.pill{display:inline-block;background:var(--mint);color:#fff;font-weight:700;border-radius:999px;padding:4px 16px;margin-bottom:10px;letter-spacing:1px}
+.sub{color:var(--sub);margin:0 0 26px}
+.group{max-width:760px;margin:0 auto 26px}
+.group h2{font-size:17px;margin:0 0 12px}
+.row{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.mom{--c:var(--rose)} .sis{--c:var(--violet)}
+.group.mom h2,.group.sis h2{color:var(--c)}
+.gift{background:var(--card);border:0;border-top:5px solid var(--c);border-radius:20px;padding:22px 10px;cursor:pointer;color:var(--ink);font:inherit;
+  box-shadow:0 8px 24px color-mix(in srgb,var(--c) 28%,transparent);transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden}
+.gift::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:sweep 4s ease-in-out infinite}
+.row .gift:nth-child(2)::after{animation-delay:1.6s}
+@keyframes sweep{0%,60%{left:-60%}100%{left:130%}}
+.gift:hover{transform:translateY(-5px) rotate(-1.5deg);box-shadow:0 14px 30px color-mix(in srgb,var(--c) 40%,transparent)}
+.gift:active{transform:scale(.95)}
+.gift .e{display:block;font-size:56px;animation:bob 2.4s ease-in-out infinite}
+.row .gift:nth-child(2) .e{animation-delay:.6s}
+.gift b{display:block;margin-top:8px}
+.gift small{color:var(--sub)}
+@keyframes bob{50%{transform:translateY(-8px) rotate(6deg)}}
+.shake{animation:shake .45s}
+@keyframes shake{25%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}75%{transform:rotate(-5deg)}}
+.veil{position:fixed;inset:0;background:rgba(20,5,25,.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:5}
+.veil.on{display:flex}
+.pop{background:var(--card);border-radius:24px;max-width:460px;width:100%;padding:0 24px 26px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4);animation:pop .4s cubic-bezier(.2,1.6,.4,1)}
+.pop .top{height:10px;margin:0 -24px 18px;background:linear-gradient(90deg,var(--rose),var(--violet),var(--mint),var(--gold))}
+@keyframes pop{from{transform:scale(.3);opacity:0}}
+.pop .big{font-size:52px;display:inline-block;animation:bob 1.6s ease-in-out infinite}
+.pop h3{margin:6px 0 10px;color:var(--c)}
+.pop p{line-height:1.6;margin:0 0 18px;font-size:17px;white-space:pre-line}
+.pop button{background:linear-gradient(90deg,var(--rose),var(--violet));color:#fff;border:0;border-radius:999px;padding:10px 26px;font:inherit;cursor:pointer}
+.bit{position:fixed;pointer-events:none;z-index:9;font-size:22px;line-height:1}
+.dot{width:9px;height:9px;border-radius:50%}
+@media (prefers-reduced-motion:reduce){.petal,.gift::after,h1,.gift .e,.pop .big{animation:none}}
+</style>
+</head>
+<body>
+<main>
+<h1>Mừng Ngày Phụ nữ Việt Nam</h1>
+<span class="pill">20 / 10</span>
+<p class="sub">Bấm vào từng món quà để mở nhé 🌹</p>
+<div class="group mom"><h2>🌷 Dành cho Mẹ</h2><div class="row" id="mom"></div></div>
+<div class="group sis"><h2>🎀 Dành cho Natasha</h2><div class="row" id="sis"></div></div>
+</main>
+<div class="veil" id="veil"><div class="pop" id="pop"><div class="top"></div><div class="big" id="pe"></div><h3 id="pt"></h3><p id="pp"></p><button id="ok">Siu ♥</button></div></div>
+<script>
+// ====== SỬA Ở ĐÂY ======
+const SELF = "anh";
+const MOM = [
+  {e:"🌷",t:"Bó hoa cho mamà",s:"Bấm để mở",
+   m:"Mẹ ơi, 20/10 này con chúc mẹ luôn khỏe mạnh, happi mọi lúc, cân bằng công việc và gia đình hihi\nMama nấu cho con gà chiên nhé 🥺👉👈❤️❤️❤️"},
+  {e:"💌",t:"Thư gửi mamà",s:"Có một lời nhắn",
+   m:"Thanks mama for everything, kể cả những lúc con chưa kịp nói.\nMong rằng vài chục năm nữa, ngày 20/10 nào cũng được ở bên mama\nLove mama :3"}
+];
+const SIS = [
+  {e:"🎀",t:"Nơ cho Thối",s:"Bấm để mở",
+   m:"Chúc Béo 20/10 ngập tràn skibidi happy, bombadili crocohihi và tập thể dục đi.\n Cố gắng tập trung học, học tốt thì kinh doanh dễ!"},
+  {e:"🍬",t:"Kẹo ăn là béo",s:"No no no dont touch",
+   m:"Chúc Thối 20/10 Ăn không béo, học không mệt, ngủ không quên báo thức.\nCòn quà thì cho a nợ nhé :3 liu liu"}
+];
+// =======================
+const veil=document.getElementById("veil"), pop=document.getElementById("pop");
+const COLORS=["#d6336c","#7048e8","#12b886","#f2a900","#ff8fb3"];
+// Cánh hoa rơi nền
+["🌸","🌷","🌹","🌺","💮"].forEach((ch,i)=>{
+  for(let k=0;k<3;k++){
+    const p=document.createElement("span"); p.className="petal"; p.textContent=ch;
+    p.style.left=Math.random()*100+"vw"; p.style.fontSize=(14+Math.random()*14)+"px";
+    p.style.animationDuration=(9+Math.random()*9)+"s"; p.style.animationDelay=(-Math.random()*14)+"s";
+    p.style.setProperty("--dx",(Math.random()*120-60)+"px"); document.body.appendChild(p);
+  }
+});
+function burst(x,y){
+  const ch=["♥","💖","✨","🌸","💕"];
+  for(let i=0;i<32;i++){
+    const s=document.createElement("span"); s.className="bit";
+    if(i%2){s.className="bit dot";s.style.background=COLORS[i%COLORS.length];} else s.textContent=ch[(i/2|0)%ch.length];
+    s.style.left=x+"px"; s.style.top=y+"px"; document.body.appendChild(s);
+    const a=Math.random()*Math.PI*2, d=70+Math.random()*170;
+    s.animate([{transform:"translate(0,0) scale(.6)",opacity:1},
+      {transform:`translate(${Math.cos(a)*d}px,${Math.sin(a)*d+90}px) scale(1.3) rotate(${Math.random()*300}deg)`,opacity:0}],
+      {duration:1100+Math.random()*700,easing:"cubic-bezier(.2,.7,.3,1)"}).onfinish=()=>s.remove();
+  }
+}
+function build(id,list){
+  const box=document.getElementById(id);
+  list.forEach(g=>{
+    const b=document.createElement("button"); b.className="gift "+id;
+    b.innerHTML=`<span class="e">${g.e}</span><b>${g.t}</b><small>${g.s}</small>`;
+    b.onclick=()=>{
+      b.classList.remove("shake"); void b.offsetWidth; b.classList.add("shake");
+      const r=b.getBoundingClientRect(); burst(r.left+r.width/2,r.top+r.height/2);
+      setTimeout(()=>{
+        pop.className="pop "+id;
+        document.getElementById("pe").textContent=g.e;
+        document.getElementById("pt").textContent=g.t;
+        document.getElementById("pp").textContent=g.m;
+        veil.classList.add("on"); burst(innerWidth/2,innerHeight/3);
+      },420);
+    };
+    box.appendChild(b);
+  });
+}
+build("mom",MOM); build("sis",SIS);
+document.getElementById("ok").onclick=()=>veil.classList.remove("on");
+veil.onclick=e=>{if(e.target===veil)veil.classList.remove("on")};
+</script>
+</body>
+</html>
